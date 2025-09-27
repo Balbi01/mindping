@@ -1,5 +1,5 @@
 # Etapa de desarrollo
-FROM node:18-alpine AS dev
+FROM node:22-alpine AS dev
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ EXPOSE 5274
 CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "5274"]
 
 # Etapa de producción
-FROM node:18-alpine AS prod
+FROM node:22-alpine
 
 WORKDIR /app
 
