@@ -1,9 +1,10 @@
+// import cors from 'cors';
 import express from 'express';
-import cors from 'cors';
+
 import mainRouter from './routes';
 
 const app = express();
-const PORT = process.env.PORT || 3033;
+const PORT = process.env.PORT ?? 3033;
 
 // Ruta principal para el backend
 app.get('/', (_req, res) => {
@@ -20,5 +21,5 @@ app.use('/api', mainRouter);
 
 // Escucha al puerto
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:` + PORT.toString());
 });
