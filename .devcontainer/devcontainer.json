@@ -4,7 +4,6 @@
   "context": "..",
   "runArgs": ["--init"],
   "forwardPorts": [3033, 5274, 5432],
-  "postCreateCommand": "cd server && npm install && cd ../client && npm install",
   "remoteEnv": {
     "VITE_API_URL": "http://localhost:5274",
     "PORT": "3033",
@@ -12,9 +11,11 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "20"
+      "version": "22"
     },
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    // Git
+    "ghcr.io/devcontainers/features/git:1": {}
   },
   "customizations": {
     "vscode": {
